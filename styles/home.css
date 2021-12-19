@@ -1,0 +1,100 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.slides {
+    height: 550px;
+    display: flex;
+}
+
+.slides div {
+    width: 50%;
+}
+
+.slides img {
+    height: 100%;
+    width: 100%;
+}
+
+.text {
+    background-color: #cea185;
+    text-align: center;
+    color: white;
+}
+
+.text>div {
+    /* width: 40%; */
+    margin: 16% 25%;
+    font-size: larger;
+}
+
+.text button {
+    border: none;
+    width: 200px;
+    font-size: medium;
+    padding: 5%;
+    background-color: #193a43;
+    color: white;
+}
+
+
+/* sliding */
+
+.mySlider {
+    position: relative;
+}
+
+.dot {
+    cursor: pointer;
+    height: 10px;
+    width: 10px;
+    margin: 0 2px;
+    border: black 1px solid;
+    border-radius: 50%;
+    display: inline-block;
+    top: 70%;
+    transform: translate(13%, -830%);
+    -ms-transform: translate(13%, -830%);
+}
+
+#dots {
+    width: 100px;
+    margin: 0 710px;
+    top: 103%;
+    position: absolute;
+}
+
+.active,
+.dot:hover {
+    background-color: #d48115;
+}
+
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: black;
+    font-weight: lighter;
+    font-size: 38px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+
+/* Position the "next button" to the right */
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.silder {
+    display: none;
+}

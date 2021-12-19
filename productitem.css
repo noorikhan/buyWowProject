@@ -1,0 +1,234 @@
+
+#pageHeadDiv{
+     color: rgb(116, 102, 97);
+     margin-top: 30px;
+     font-weight: bolder;
+     font-size: 40px;
+}
+.cartproductprice{
+     margin-top: 10px;
+     margin-left: -10px;
+}
+
+#pageHeadDiv+p{
+     color: rgb(171, 164, 157);
+     font-size: 16px;
+     margin-top: 30px;
+}
+
+#productinfoDiv{
+     margin-left: 25%;
+     width: 60%;
+}
+.cartimg{
+     width: 70px;
+}
+#productinfoDivcart{
+     display: grid;
+     grid-template-columns: 70px 250px 20px 50px 20px ;
+}
+
+#headDiv{
+     margin-left: 5%;
+}
+
+/* /* grid buttons to arrange of products */
+#dotteddiv {
+     height: 100%;
+     display: flex;
+     padding-top: 5px;
+     box-sizing: border-box;
+ }
+ 
+ #twodott {
+     border: 1px solid gray;
+     width: 46px;
+     height: 10px;
+     padding: 10px;   
+ }
+ #threedott {
+     border: 1px solid gray;
+     width: 60px;
+     height: 10px;
+     padding: 10px;
+ }
+ #fourdott {
+     border: 1px solid gray;
+     width: 80px;
+     height: 10px;
+     padding: 10px;
+ }
+ #dotteddiv i {
+      font-size: 8px;
+      background-color: gray;
+      color: gray;
+      border-radius:10% ;
+      margin-left: 3px;
+ }
+
+ #typesort{
+      width: 200px;
+      height: 35px;
+      font-size: 17px;
+      margin-left: 80%;
+      margin-bottom: -400px;
+      outline: none;
+      background-origin: none;
+      background-color: rgb(208, 208, 208);
+ }
+
+/* nutrion main div */
+#nutritionContainer{
+     margin: 50px 0px;
+     display: grid;
+     grid-template-columns: auto auto auto auto;
+     grid-template-rows: 450px 450px 450px 450px 450px 450px 450px 450px;
+     grid-gap: 45px;
+}
+
+/* .product-container-image{
+     height: 200px;
+} */
+
+/* buttons div in product */
+.product-container-image-buttons {
+     display: flex;
+     margin-top: 30px;
+     margin-left: 10%;
+     text-align: center;
+}
+
+/* span buttons in product button div */
+.product-container-image-buttons>span{
+     display: flex;
+     width: 45.5%;
+     height: 43px;
+     color: white;
+     font-size: 8px;
+     background-color: black;
+     font-weight: bolder;
+     visibility: hidden;
+}
+
+/* buttons spans container */
+.product-container-image-buttons>span:hover{
+     color: white;
+     background-color: #df8140;
+     font-weight: bolder;
+}
+
+/* description container  */
+.product-container-desc{
+     margin-top: 30px;
+     font-size: 20px;
+     text-align:center;
+     border-radius: 3%;
+     font-family: "Neutra Text TF",sans-serif;
+     font-weight: 600;
+}
+
+/* price and review span in description div  */
+.product-container-desc-reviews{
+     color: rgb(171, 164, 157);
+}
+
+.product-container-desc-price{
+     color: rgb(30, 30, 30);
+}
+
+/* description span in product description div  */
+.product-container-desc span:nth-child(1):hover{
+     color:#df8140;
+}
+
+/* buttons styling of spans in image div */
+.bg_slider {
+     --initialTextColor: rgb(255, 255, 255);
+     --slideTextColor: #ffffff;
+
+     --initialBgColor: #272838;
+     --slideBgColor: #df8140;
+
+     color: var(--initialTextColor);
+
+     background-image: linear-gradient(90deg,
+         var(--initialBgColor) 0%,
+         var(--initialBgColor) 50%,
+         var(--slideBgColor) 50%,
+         var(--slideBgColor) 100%);
+     background-size: 200%;
+     transition: background-position .3s cubic-bezier(.47, .1, 1, .63),
+       color .2s linear;
+     transition-delay: 0.0s, 0.15s;
+     opacity:var(--opacity);
+   }
+
+   .bg_slider:hover {
+     color: var(--slideTextColor);
+     cursor: pointer;
+     background-position: -100% 100%;
+   }
+
+ *{
+     font-family: "Neutra Text TF",sans-serif;
+ } 
+
+ #topTitleDiv{
+      margin-top: 350px;
+ }
+
+ #discountCode{
+      display: flex;
+ }
+ #discountCode input{
+      width: 200px;
+      background-color: rgb(226, 226, 226);
+      margin-left: 15%;
+      height: 33px;
+      font-size: 16px;
+ }
+
+ #discountCode button{
+     width: 90px;
+     background-color: rgb(0, 0, 0);
+     color: white;
+     margin-left: 6px;
+     height: 39px;
+     font-size: 16px;
+}
+
+#securecheckout{
+     width: 270px;
+     height: 50px;
+     margin-left: 10%;
+     background-color: rgb(255, 208, 0);
+}
+#securepay{
+     margin-top: 0px;
+     font-size: 25px;
+}
+
+#close1{
+     width: 190px;
+     background-color: rgb(255, 255, 255);
+     outline: none;
+     border: white;
+     margin-left: 10px;
+     margin-top: 10px;
+     height: 25px;
+     font-size: 16px;
+     margin-bottom: 30px;
+}
+.priceClass{
+     display: flex;
+     font-size: 25px;
+}
+
+.priceClass p:nth-child(2){
+     margin-left: 20px;
+     font-weight: 600;   
+}
+
+
+
+

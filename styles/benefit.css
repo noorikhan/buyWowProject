@@ -1,0 +1,140 @@
+#benefitone {
+    width: 500px;
+    height: 20px;
+    margin-left: 320px;
+    color: #e6a088;
+}
+
+#benefittwo {
+    width: 800px;
+    height: 20px;
+    margin-left: 320px;
+    margin-bottom: 70px;
+    color: #746661;
+}
+
+.colorgray {
+    color: #741713;
+}
+
+.benefitsix>h5 {
+    color: #741713;
+}
+
+.benefitsix>h3 {
+    color: #741713;
+}
+
+.benefitsix>h4 {
+    color: #741713;
+}
+
+#benefitthree {
+    width: 900px;
+    height: 400px;
+    margin: auto;
+    margin-bottom: 50px;
+    margin-top: 30px;
+}
+
+#benefitfour {
+    width: 850px;
+    margin-bottom: 60px;
+    margin-left: 315px;
+    color: #8c8a8c;
+}
+
+#benefitfour>p {
+    line-height: 30px;
+    justify-content: left;
+    margin-top: 15px;
+    color: #8c8a8c;
+}
+
+#benefitfive {
+    width: 850px;
+    margin-bottom: 60px;
+    margin-left: 315px;
+}
+
+#benefitfive>p {
+    line-height: 30px;
+    margin-top: 15px;
+    color: #8c8a8c;
+}
+
+.grayshow>li {
+    color: #8c8a8c;
+}
+
+#benefitsix {
+    width: 850px;
+    margin-bottom: 100px;
+    margin-left: 315px;
+}
+
+#benefitsix>p {
+    line-height: 30px;
+    margin-top: 15px;
+    color: #424542;
+}
+
+.benefitsix>p>ul>li {
+    line-height: 30px;
+    margin-top: 15px;
+    color: #424542;
+}
+
+#hrdiv {
+    color: gray;
+    line-height: 30px;
+    margin: auto;
+    width: 850px;
+    margin-top: 50px;
+    margin-left: 315px;
+}
+
+#previousdiv {
+    width: 850px;
+    height: 60px;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    margin-left: 315px;
+    background-color: lightgray;
+}
+
+#threeimagetext {
+    width: 850px;
+    margin-bottom: 10px;
+    margin-left: 315px;
+}
+
+#threeimage {
+    width: 850px;
+    height: 340px;
+    margin-bottom: 60px;
+    margin-left: 315px;
+    justify-content: space-around;
+    display: flex;
+    box-sizing: border-box;
+}
+
+#threeimage>div {
+    width: 30%;
+    margin-right: 20px;
+}
+
+#threeimage>div>img {
+    width: 100%;
+    height: auto;
+}
+
+#threeimage>div>h5 {
+    text-align: left;
+    justify-content: center;
+}
+
+.benefitsix {
+    width: 850px;
+    margin-left: 315px;
+}
