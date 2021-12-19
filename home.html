@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page</title>
+  </head>
+  <script
+    src="https://kit.fontawesome.com/0ae10de0e5.js"
+    crossorigin="anonymous"
+  ></script>
+
+  <link rel="stylesheet" type="text/css" href="styles/footer.css" />
+  <link rel="stylesheet" type="text/css" href="styles/home.css" />
+  <link rel="stylesheet" type="text/css" href="styles/navbar.css" />
+  <body>
+    <header></header>
+    <main>
+      <div class="mySlider">
+        <div class="silder">
+          <div class="slides">
+            <div class="image">
+              <img src="homeImages/Banner_tube.jpeg" />
+            </div>
+            <div class="text">
+              <div>
+                <h4 style="color: #8d4822">L A U N C H I N G</h4>
+                <h1>WOW's 1st Paper Tube</h1>
+                <br />
+                <p>Be WOW, Naturally #EkChotiSiShuruwaat</p>
+                <br />
+                <button>SHOP RESPONSIBLY</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="silder">
+          <div class="slides">
+            <div class="text">
+              <div>
+                <h4 style="color: #8d4822"># B E W O W N A T U R A L L Y</h4>
+                <h1>Strengthen Hair With Onin</h1>
+                <br />
+                <p>Onion Range of Hair Care Products</p>
+                <br />
+                <button>Discover Now</button>
+              </div>
+            </div>
+            <div class="image">
+              <img src="homeImages/Banner_lady.jpeg" />
+            </div>
+          </div>
+        </div>
+
+        <div class="silder">
+          <div class="slides">
+            <div class="image">
+              <img src="homeImages/Banner_lady1.jpeg" />
+            </div>
+            <div class="text">
+              <div>
+                <h4 style="color: #8d4822">B E S T O F N A T U R E</h4>
+                <h1>Infused with Aloe Vera</h1>
+                <br />
+                <p>Aloe Vera Range of Skin Care</p>
+                <br />
+                <button>Discover Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+
+      <div style="text-align: center" id="dots">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+      </div>
+    </main>
+    <footer></footer>
+  </body>
+</html>
+<script src="scripts/home.js"></script>
+<script type="module" src="scripts/headerFooter.js"></script>
