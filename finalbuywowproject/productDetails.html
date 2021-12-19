@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/productDetails.css">
+    <script src="https://kit.fontawesome.com/aa6d8f6c48.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="styles/footer.css" />
+    <link rel="stylesheet" type="text/css" href="styles/navbar.css" />
+    <link rel="stylesheet" href="productitem.css">
+    <title>ProductDetails</title>
+</head>
+<body>
+    <header></header>
+    <main>
+        
+    </main>
+    <footer></footer>
+</body>
+</html>
+<script type="module">
+    //integrating navbar and footer========
+import nav from "/components/navbar.js";
+  let hearder = document.querySelector("header");
+  hearder.innerHTML = nav();
+  let cart = document.getElementById("cart");
+
+  cart.addEventListener("click", openNav);
+  function openNav() {
+    document.getElementById("mySidenav").style.width = "450px";
+    let item = JSON.parse(localStorage.getItem("productDescriptionpagecartitems"));
+
+let sum  = 0;
+for(let i=0;i<item.length;i++){
+     sum = sum + item[i].price;
+}
+let totalPrice = sum;
+if(item.length == 0){
+          document.getElementById("cartItems").innerHTML = `<div id="mpt"><p>Your cart is currently empty.</p><a href="index.html">Start Shopping &#8594</a></div>`;
+
+          let totalprice = document.getElementById("totalPrice");
+          totalprice.textContent = "₹0";
+}else{
+     displayCartItems(item)
+     function displayCartItems(item){
+          let sum  = 0;
+for(let i=0;i<item.length;i++){
+     sum = sum + item[i].price;
+}
+let totalPrice = sum;
+
+     document.getElementById("cartItems").innerText = "";
+     let totalprice = document.getElementById("totalPrice");
+     totalprice.textContent = "₹0";
+
+     item.map((e,i)=>{
+
+     let totalprice = document.getElementById("totalPrice");
+     totalprice.textContent = "₹"+totalPrice;
+
+     let pdiv = document.createElement("div");
+     pdiv.setAttribute("id","productinfoDivcart");
+     pdiv.style.marginTop = "30px"
+
+     let img = document.createElement("img");
+     img.setAttribute("class","cartimg");
+     img.setAttribute("src",e.imgFront);
+
+     let title = document.createElement("div");
+     title.innerText = e.title;
+
+     let emptydiv = document.createElement("div");
+
+     let price = document.createElement("div");
+     price.setAttribute("class","cartproductprice")
+     price.textContent = "₹"+e.price;
+
+     
+
+     let closebutton = document.createElement("button");
+     closebutton.textContent="X";
+     closebutton.style.height= "15px";
+     closebutton.style.background = "white";
+     closebutton.style.border = "none";
+     closebutton.addEventListener("click",function(){deleteItem(e,i);});
+
+     pdiv.append(img,title,emptydiv,price,closebutton);
+     document.getElementById("cartItems").append(pdiv);
+     document.getElementById("mySidenav").style.width = "450px";
+
+     });
+}
+
+     function deleteItem(e,i){
+          localStorage.setItem("removeditem",JSON.stringify(e));
+          localStorage.removeItem("removeditem");
+          item.splice(i,1)
+          console.log(e);
+          localStorage.setItem("productDescriptionpagecartitems",JSON.stringify(item))
+          displayCartItems(item);
+     }
+
+}
+
+  }
+
+  let close = document.getElementById("close");
+  close.addEventListener("click", closeNav);
+
+  function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+  }
+
+  let search = document.getElementById("search");
+
+  search.addEventListener("click", openSearch);
+
+  function openSearch() {
+    document.getElementById("mySearchnav").style.height = "179px";
+    
+  }
+
+  let remove = document.getElementById("remove");
+  remove.addEventListener("click", closeSearch);
+
+  function closeSearch() {
+    document.getElementById("mySearchnav").style.height = "0";
+  }
+  import footerPart from "/components/footer.js";
+  let footer = document.querySelector("footer");
+  footer.innerHTML = footerPart();
+
+  //section
+//==========================changeable part==========================
+// import data from "./components/part.js"
+import productDetails from "./components/productDetails.js"
+let datas= JSON.parse(localStorage.getItem("productDescriptionpageitem"));
+
+
+let main=document.querySelector("main");
+main.innerHTML=productDetails(datas.imgFront,datas.imgBack,datas.img3,datas.img4,datas.title,datas.description,datas.banner,datas.descTitle,datas.leftImg1,datas.leftImg1d,datas.leftImg2,datas.leftImg2d,datas.rightImg1,datas.rightImg1d,datas.rightImg2,datas.rightImg2d);
+let addbutton = document.getElementById("btn");
+addbutton.addEventListener("click",()=>{
+    addToCart(datas);
+    function addToCart(items){
+          let productDescriptionpcartitems = JSON.parse(localStorage.getItem("productDescriptionpagecartitems")) || [];
+          productDescriptionpcartitems.push(items);
+          let arrprice = productDescriptionpcartitems;
+          let sum  = 0;
+          for(let i=0;i<arrprice.length;i++){
+               sum = sum + arrprice[i].price;
+          }
+          let totalPrice = sum;
+          console.log(sum);
+          localStorage.setItem("productDescriptionpagecartitems",JSON.stringify(productDescriptionpcartitems));
+          let item = JSON.parse(localStorage.getItem("productDescriptionpagecartitems"));
+          document.getElementById("cartItems").innerText = "";
+
+          displayCartItems(item)
+               function displayCartItems(item){
+                let sum  = 0;
+          for(let i=0;i<item.length;i++){
+               sum = sum + item[i].price;
+          }
+          let totalPrice = sum;
+          let totalprice = document.getElementById("totalPrice");
+               totalprice.textContent = "₹"+totalPrice;
+               document.getElementById("cartItems").innerText = "";
+
+               item.map((e,i)=>{
+
+               let pdiv = document.createElement("div");
+               pdiv.setAttribute("id","productinfoDivcart");
+               pdiv.style.marginTop = "30px"
+
+               let img = document.createElement("img");
+               img.setAttribute("class","cartimg");
+               img.setAttribute("src",e.imgFront);
+
+               let title = document.createElement("div");
+               title.innerText = e.title;
+
+               let emptydiv = document.createElement("div");
+
+               let price = document.createElement("div");
+               price.setAttribute("class","cartproductprice")
+               price.textContent = "₹"+e.price;
+
+               let totalprice = document.getElementById("totalPrice");
+               totalprice.textContent = "₹"+totalPrice;
+
+               let closebutton = document.createElement("button");
+               closebutton.textContent="X";
+               closebutton.style.height= "15px";
+               closebutton.style.background = "white";
+               closebutton.style.border = "none";
+               closebutton.addEventListener("click",function(){deleteItem(e,i);});
+
+               pdiv.append(img,title,emptydiv,price,closebutton);
+               document.getElementById("cartItems").append(pdiv);
+               document.getElementById("mySidenav").style.width = "450px";
+
+               });
+          }
+
+               function deleteItem(e,i){
+                    localStorage.setItem("removeditem",JSON.stringify(e));
+                    localStorage.removeItem("removeditem");
+                    item.splice(i,1)
+                    console.log(e);
+                    localStorage.setItem("productDescriptionpagecartitems",JSON.stringify(item))
+                    displayCartItems(item);
+               }
+
+          }
+})
+
+//don't need to change in te botttom part==============================
+//=======================================================================================
+let thumbnails = document.getElementsByClassName('thumbnail')
+    let activeImages = document.getElementsByClassName('active')
+
+    for (var i=0; i < thumbnails.length; i++){
+
+        thumbnails[i].addEventListener('click', function(){
+            console.log(activeImages)
+            
+            if (activeImages.length > 0){
+                activeImages[0].classList.remove('active')
+            }
+
+
+            this.classList.add('active')
+            document.getElementById('featured').src = this.src;
+            document.getElementById('featured').style.width="600px";
+            document.getElementById('featured').style.height="600px";
+            document.getElementById('featured').style.objectFit="cover";
+        })
+    }
+
+
+    let buttonRight = document.getElementById('slideRight');
+    let buttonLeft = document.getElementById('slideLeft');
+
+    buttonLeft.addEventListener('click', function(){
+        document.getElementById('slider').scrollLeft -= 180
+    })
+
+    buttonRight.addEventListener('click', function(){
+        document.getElementById('slider').scrollLeft += 180
+    });
+
+
+    ///for zoom;
+    document.getElementById('img-container').addEventListener('mouseover', function(){
+        imageZoom('featured')
+        
+    })
+    
+    function imageZoom(imgID){
+        let img = document.getElementById(imgID)
+        let lens = document.getElementById('lens')
+    
+        lens.style.backgroundImage = `url( ${img.src} )`
+    
+        let ratio = 2
+    
+        lens.style.backgroundSize = (img.width * ratio) + 'px ' + (img.height * ratio) + 'px';
+    
+        img.addEventListener("mousemove", moveLens)
+        lens.addEventListener("mousemove", moveLens)
+        img.addEventListener("touchmove", moveLens)
+    
+        function moveLens(){
+            //1
+            let pos = getCursor()
+            //console.log('pos:', pos)
+    
+            //2
+            let positionLeft = pos.x - (lens.offsetWidth / 2)
+            let positionTop = pos.y - (lens.offsetHeight / 2)
+    
+            //5
+            if(positionLeft < 0 ){
+                positionLeft = 0
+            }
+    
+            if(positionTop < 0 ){
+                positionTop = 0
+            }
+    
+            if(positionLeft > img.width - lens.offsetWidth /3 ){
+                positionLeft = img.width - lens.offsetWidth /3
+            }
+    
+            if(positionTop > img.height - lens.offsetHeight /3 ){
+                positionTop = img.height - lens.offsetHeight /3
+            }
+            //3
+            lens.style.left = positionLeft + 'px';
+            lens.style.top = positionTop + 'px';
+    
+            //4
+            lens.style.backgroundPosition = "-" + (pos.x * ratio) + 'px -' +  (pos.y * ratio) + 'px'
+        }
+    
+        function getCursor(){
+            let e = window.event
+            let bounds = img.getBoundingClientRect()
+            //console.log('e:', e)
+            //console.log('bounds:', bounds)
+            let x = e.pageX - bounds.left
+            let y = e.pageY - bounds.top
+            x = x - window.pageXOffset;
+            y = y - window.pageYOffset;
+            return {'x':x, 'y':y}
+        }
+    
+    }
+    ///for ml selection:
+
+    ///for background image changer
+    let prod=document.getElementById("related-prod");
+    prod.addEventListener("mousemove",()=>{
+         let img=document.getElementById("btn-img");
+        //  let icon=document.querySelector(".prod-icon");
+         img.src="https://cdn.shopify.com/s/files/1/1375/4957/products/3_1b3d6605-7e51-4d0f-88b8-70bcc452306f_360x.jpg?v=1632827678";
+         document.querySelector(".prod-icon").classList.add("active");
+    })
+    prod.addEventListener("mouseout",()=>{
+        let img=document.getElementById("btn-img");
+       //  let icon=document.querySelector(".prod-icon");
+        img.src="https://cdn.shopify.com/s/files/1/1375/4957/products/onion-hair-oil-bottle_360x.jpg?v=1629864426";
+        document.querySelector(".prod-icon").classList.remove("active");
+   })
+</script>

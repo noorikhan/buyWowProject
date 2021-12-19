@@ -1,0 +1,78 @@
+body{
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;;
+}
+#cartContainer{
+    display: inline-flex;
+    width: 99%;
+}
+#cartContainerLeft{
+    width: 45%;
+    padding: 30px 30px 0 30px;
+    margin-left: 80px;
+    border-right: 0.4px solid rgb(170, 170, 170) ;
+}
+#contactinfoBox{
+    display:inline;
+}
+#loginText{
+    float: right;
+    font-size: 14px;
+    margin: -20px 0 20px 0;
+}
+.heading{
+    font-size: 21px;
+    font-weight: normal;
+    margin: 20px 0 20px 0  ;
+}
+.link{
+    font-size: 12px;
+    text-decoration: none;
+    color:blue;
+    margin-left: 10px;
+}
+.linkpage{
+    font-size: 12px;
+    text-decoration: none;
+    color: rgb(43, 42, 42);
+}
+.link2{
+    text-decoration: none;
+    color:blue;
+}
+.details{
+    width: 100%;
+    height: 40px;
+    margin-bottom: 1em;
+    border-radius: 5px;
+    border: .5px solid rgb(184, 182, 182);
+}
+.userInput{
+    width: 48.8%;
+    height: 40px;
+    margin-bottom: 1em;
+    border-radius: 5px;
+    border: .5px solid rgb(184, 182, 182);
+}
+.userAddress{
+    width: 32%;
+    height: 40px;
+    margin-bottom: 1em;
+    border-radius: 5px;
+    border: .5px solid rgb(184, 182, 182);
+}
+.inline{
+    display: inline-block;
+    margin-top: 20px ;
+    margin-bottom: 30px;
+}
+#btn{
+    float: right;
+    background-color: blue;
+    color: white;
+    width: 220px;
+    height: 44px;
+    background-color: rgb(29, 61, 245);
+    border-radius: 5px;
+    font-size: 20px;
+}
+
