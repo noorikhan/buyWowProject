@@ -8,7 +8,7 @@
      <script src="https://kit.fontawesome.com/f3afea15cd.js" crossorigin="anonymous"></script>
      <link href="http://fonts.cdnfonts.com/css/neutra-text-alt" rel="stylesheet">
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-     <link rel="stylesheet" href="productitem.css">
+     <link rel="stylesheet" href="./styles/productitem.css">
      <script
      src="https://kit.fontawesome.com/0ae10de0e5.js"
      crossorigin="anonymous"
@@ -162,8 +162,8 @@
 
 <!-- script to main Nutrition page and main tag -->
 <script type="module">
-     import itemdetails from "./productitem.js";
-     import nutrition from "./nutritionData.js";
+     import itemdetails from "/components/productitem.js";
+     import nutrition from "/components/nutritionData.js";
      let arr=nutrition();
      itemdetails(arr);
 
