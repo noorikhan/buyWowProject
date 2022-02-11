@@ -9,6 +9,7 @@ For the frontend, we have used HTML, CSS, JavaScript and ES6. Localstorage and A
 HOME PAGE:-
 <img src="https://github.com/noorikhan/buyWowProject
 /blob/main/Images/buyWowProductDetailPage.png">
+<img src="https://github.com/renurisha/buywowclone/blob/main/buywowscreenshots/homepage.png">
 <!-- /Users/akhtarraza/Desktop/buyWowProject/Images/buyWowProductDetailPage.png -->
 
 <img src="![plot](Users/akhtarraza/Desktop/buyWowHomePage.png)">
