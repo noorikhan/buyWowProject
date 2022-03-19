@@ -2,7 +2,7 @@ function nav() {
   return ` <div id="nav">
   <div id="topDiv">
     <div id="toprightDiv">
-    <a href="home.html">
+    <a href="index.html">
       <div id="logoDiv">
         <img width="140px" style="border-bottom: 5px solid #CEA185; padding-bottom: 2%;" src="images/WOW_logo-01.png" />
         <img width="140px" style="padding-bottom: 2%;"src="images/WOW_logo-02.png" />
@@ -151,7 +151,7 @@ function nav() {
   <div><p style = "color: #B2B2B2;">Taxes and shipping calculated at checkout</p></div>
   <div id="cDiv">
   <a href="checkout/checkoutpage.html"><button id = "cbtn">CHECK OUT</button></a>
-  <a href = "home.html">Update Cart</a></div>
+  <a href = "index.html">Update Cart</a></div>
   </div>
 </div>
 
